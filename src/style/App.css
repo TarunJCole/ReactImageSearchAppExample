@@ -1,0 +1,58 @@
+/* vars */
+html {
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --border-color: #ddd;
+    --bg-color: #fafafa;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* setup */
+html {
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    background: var(--bg-color);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* searchbar */
+.searchbar {
+    text-align: center;
+    width: 50%;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.searchbar input {
+    width: 100%;
+    padding: 10px 45px;
+    font-size: 1.1rem;
+    border: 1px solid var(--border-color);
+    background: var(--light-color);
+    color: var(--dark-color);
+    outline: none;
+    border-radius: 20px;
+    transition: background 0.4s ease;
+}
+
+.searchbar input:hover {
+    background: #dedede;
+}
+
+.searchbar i {
+    position: absolute;
+    top: 33%;
+    left: 20px;
+    color: #aaa;
+}
