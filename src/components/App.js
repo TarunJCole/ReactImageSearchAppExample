@@ -17,7 +17,8 @@ export default class App extends Component {
             `https://api.unsplash.com/search/photos`,
             {
                 params: {
-                    query: term
+                    query: term,
+                    per_page: 48
                 },
 
                 headers: {
@@ -26,15 +27,22 @@ export default class App extends Component {
             }
         );
 
-        console.log(searchResults);
         this.setState({ imageResults: searchResults.data.results });
     };
 
     render() {
         return (
-            <div>
+            <div id="app">
                 <Searchbar onSearch={this.onSearch} />
                 <ImageList images={this.state.imageResults} />
+                {this.state.imageResults !== [] ? (
+                    <footer id="disclaimer">
+                        <span id="disclaimer-text">
+                            Images provided by{" "}
+                            <a href="https://unsplash.com">Unsplash</a>
+                        </span>
+                    </footer>
+                ) : null}
             </div>
         );
     }

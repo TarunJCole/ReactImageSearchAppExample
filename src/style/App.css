@@ -3,7 +3,7 @@ html {
     --dark-color: #333;
     --light-color: #f4f4f4;
     --border-color: #ddd;
-    --bg-color: #fafafa;
+    --bg-color: #333;
 }
 
 /* reset */
@@ -55,4 +55,49 @@ html {
     top: 33%;
     left: 20px;
     color: #aaa;
+}
+
+/* images */
+#image-list {
+    margin: 3rem 6rem;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#image-list img {
+    max-width: 100%;
+    border-radius: 5px;
+    position: relative;
+}
+
+#image-list img::before {
+    content: "HELLO";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+/* footer */
+#disclaimer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    background: none;
+    pointer-events: none;
+    padding: 2rem;
+}
+
+#disclaimer-text {
+    pointer-events: all;
+    padding: 10px;
+    background: #fafafa99;
+    border-radius: 30px;
 }
