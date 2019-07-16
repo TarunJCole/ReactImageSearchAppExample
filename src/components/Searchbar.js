@@ -7,14 +7,19 @@ export default class Searchbar extends Component {
 
     onInputChange = event => {
         this.setState({ term: event.target.value });
-        console.log(this.state.term);
+    };
+
+    onFormSubmit = event => {
+        event.preventDefault();
+
+        this.props.onSearch(this.state.term);
     };
 
     render() {
         return (
             <div className="searchbar">
                 <i className="fas fa-search" />
-                <form onSubmit={this.props.onSearchSubmit}>
+                <form onSubmit={this.onFormSubmit}>
                     <input
                         type="text"
                         onChange={this.onInputChange}

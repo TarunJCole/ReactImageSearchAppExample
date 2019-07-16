@@ -15,8 +15,7 @@ html {
 /* setup */
 html {
     box-sizing: border-box;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     background: var(--bg-color);
 }
 
@@ -35,6 +34,7 @@ html {
 }
 
 .searchbar input {
+    font-family: "Montserrat", sans-serif;
     width: 100%;
     padding: 10px 45px;
     font-size: 1.1rem;
