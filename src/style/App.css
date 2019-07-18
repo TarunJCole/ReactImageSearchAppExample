@@ -78,6 +78,7 @@ html {
 #image-list .image-item img {
     max-width: 100%;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #image-list .image-info {
@@ -163,11 +164,51 @@ html {
 }
 
 #modal-content {
-    max-height: 90vh;
-    max-width: 90vw;
+    max-height: 95vh;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
 }
 
 #modal-content img {
-    max-height: 90vh;
+    max-height: 86vh;
     max-width: 90vw;
+}
+
+#modal-content div {
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#modal-content div,
+#modal-content span {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+#modal-content .user,
+#modal-content span {
+    margin: 0px 10px;
+}
+
+#modal-content .user span {
+    margin-left: 10px;
+}
+
+#modal-content i {
+    margin-right: 10px;
+}
+
+#modal-content a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#modal-content .user img {
+    border-radius: 50%;
 }
