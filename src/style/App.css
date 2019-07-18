@@ -3,7 +3,7 @@ html {
     --dark-color: #333;
     --light-color: #f4f4f4;
     --border-color: #ddd;
-    --bg-color: #333;
+    --bg-color: #fafafa;
 }
 
 /* reset */
@@ -55,6 +55,7 @@ html {
     top: 33%;
     left: 20px;
     color: #aaa;
+    pointer-events: none;
 }
 
 /* images */
@@ -68,20 +69,44 @@ html {
     justify-content: center;
 }
 
-#image-list img {
-    max-width: 100%;
-    border-radius: 5px;
+#image-list .image-item {
     position: relative;
+    z-index: 0;
+    overflow: hidden;
 }
 
-#image-list img::before {
-    content: "HELLO";
+#image-list .image-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+#image-list .image-info {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: #fafafabb;
     width: 100%;
-    height: 100%;
-    background-color: white;
+    padding: 1rem;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(70px);
+    transition: transform 0.5s ease;
+}
+
+#image-list .image-info span {
+    margin-left: 10px;
+}
+
+#image-list .image-info img {
+    width: 32px;
+    height: 32px;
+}
+
+/* display info on hover */
+#image-list .image-item .display {
+    transform: translateY(0px);
 }
 
 /* footer */
@@ -98,6 +123,6 @@ html {
 #disclaimer-text {
     pointer-events: all;
     padding: 10px;
-    background: #fafafa99;
+    background: #3339;
     border-radius: 30px;
 }

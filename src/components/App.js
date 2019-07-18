@@ -26,7 +26,7 @@ export default class App extends Component {
                 }
             }
         );
-
+        console.log(searchResults);
         this.setState({ imageResults: searchResults.data.results });
     };
 
