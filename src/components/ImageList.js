@@ -8,7 +8,11 @@ export default class ImageList extends Component {
             <div id="image-list">
                 {this.props.images
                     ? this.props.images.map(image => (
-                          <ImageItem image={image} key={image.id} />
+                          <ImageItem
+                              image={image}
+                              key={image.id}
+                              changeModalImage={this.props.changeModalImage}
+                          />
                       ))
                     : null}
             </div>

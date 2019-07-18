@@ -23,17 +23,24 @@ export default class ImageItem extends Component {
                 className="image-item"
                 onMouseEnter={() => this.setState({ hover: true })}
                 onMouseLeave={() => this.setState({ hover: false })}
+                onClick={() => this.props.changeModalImage(this.props.image)}
             >
                 <img
                     src={this.props.image.urls.regular}
                     alt={this.props.image.alt_description}
                 />
                 <div className="image-info" ref={this.imageInfo}>
-                    <img
-                        src={this.props.image.user.profile_image.medium}
-                        alt="user avatar"
-                    />
-                    <span>{this.props.image.user.name}</span>
+                    <div>
+                        <img
+                            src={this.props.image.user.profile_image.medium}
+                            alt="user avatar"
+                        />
+                        <span>{this.props.image.user.name}</span>
+                    </div>
+                    <span>
+                        <i className="far fa-thumbs-up" />{" "}
+                        {this.props.image.likes}
+                    </span>
                 </div>
             </div>
         );

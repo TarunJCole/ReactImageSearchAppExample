@@ -90,9 +90,14 @@ html {
     border-radius: 0 0 5px 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     transform: translateY(70px);
     transition: transform 0.5s ease;
+}
+
+#image-list .image-info div {
+    display: flex;
+    align-items: center;
 }
 
 #image-list .image-info span {
@@ -125,4 +130,44 @@ html {
     padding: 10px;
     background: #3339;
     border-radius: 30px;
+}
+
+/* modal */
+#modal-wrapper {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: #333a;
+    width: 100vw;
+    height: 100vh;
+}
+
+#modal-wrapper .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.8rem 2rem;
+    border: none;
+    background: none;
+    color: #f4f4f4;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.5s;
+}
+
+#modal-wrapper .close-button:hover {
+    color: #dedede;
+}
+
+#modal-content {
+    max-height: 90vh;
+    max-width: 90vw;
+}
+
+#modal-content img {
+    max-height: 90vh;
+    max-width: 90vw;
 }

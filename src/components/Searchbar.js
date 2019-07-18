@@ -24,7 +24,7 @@ export default class Searchbar extends Component {
                         type="text"
                         onChange={this.onInputChange}
                         value={this.state.term}
-                        placeholder="Search Images"
+                        placeholder="Search"
                     />
                 </form>
             </div>
