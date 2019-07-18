@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../style/App.css";
+import "../style/Media.css";
 import KEYS from "../keys";
 
 import Searchbar from "./Searchbar";
@@ -33,7 +34,6 @@ export default class App extends Component {
     };
 
     changeModalImage = image => {
-        console.log(image);
         this.setState({ modalImage: image });
     };
 
