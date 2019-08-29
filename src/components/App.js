@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import "../style/App.css";
 import "../style/Media.css";
-import KEYS from "../keys";
 
 import Searchbar from "./Searchbar";
 import ImageList from "./ImageList";
@@ -25,7 +24,7 @@ export default class App extends Component {
                 },
 
                 headers: {
-                    Authorization: `Client-ID ${KEYS.access_key}`
+                    Authorization: `Client-ID ${process.env.ACCESS_KEY}`
                 }
             }
         );
