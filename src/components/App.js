@@ -24,7 +24,7 @@ export default class App extends Component {
                 },
 
                 headers: {
-                    Authorization: `Client-ID ${process.env.ACCESS_KEY}`
+                    Authorization: `Client-ID ${process.env.REACT_APP_ACCESS_KEY}`
                 }
             }
         );
